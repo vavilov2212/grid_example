@@ -1,0 +1,14 @@
+.root {
+  width: 24px;
+  height: 24px;
+
+  background: center url('./twitter.svg') no-repeat;
+
+  &:hover {
+    background: center url('./twitter_hover.svg') no-repeat;
+  }
+
+  &:active {
+    background: center url('./twitter_active.svg') no-repeat;
+  }
+}

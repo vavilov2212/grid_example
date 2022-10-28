@@ -1,0 +1,78 @@
+@import "./mixins.scss";
+@import "./vars.scss";
+
+.footer {
+  margin: 60px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint_l) {
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #1e2339;
+}
+
+.footerContentContainer {
+  flex: 1;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(255px, calc(100% - 8rem) / 4), auto)
+  );
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.navLinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.socialIconsContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIconsAndQuestiosBlockContainer {
+}
+
+.applinksContainer {
+  display: flex;
+
+  & svg {
+    max-width: 100%;
+  }
+}
+
+.questionsBlockContainer {
+}
+
+.navLink {
+  @include text-color(white);
+  @include font-size(sub-normal);
+  text-decoration: none;
+  margin: 0 10px;
+
+  @media (max-width: $breakpoint_l + 100) {
+    margin: 0 8px;
+  }
+}

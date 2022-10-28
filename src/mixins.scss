@@ -1,0 +1,108 @@
+@mixin font-weight ($variant: regular) {
+  @if $variant == light {
+    font-family: 'MulishLight', sans-serif;
+  }
+  @if $variant == regular {
+    font-family: 'MulishRegular', sans-serif;
+  }
+  @if $variant == semiBold {
+    font-family: 'MulishSemiBold', sans-serif;
+  }
+  @if $variant == bold {
+    font-family: 'MulishBold', sans-serif;
+  }
+  @if $variant == extraBold {
+    font-family: 'MulishExtraBold', sans-serif;
+  }
+}
+
+@mixin font-size ($variant: normal) {
+  @if $variant == small{
+    font-size: 10px;
+    line-height: 140%;
+  }
+  @if $variant == ab-small{
+    font-size: 13px;
+    line-height: 140%;
+  }
+  @if $variant == sub-normal{
+    font-size: 16px;
+    line-height: 140%;
+  }
+  @if $variant == button{
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.025em;
+  }
+  @if $variant == normal{
+    font-size: 20px;
+    line-height: 140%;
+  }
+  @if $variant == ab-normal{
+    font-size: 25px;
+    line-height: 140%;
+  }
+  @if $variant == sub-large{
+    font-size: 31px;
+    line-height: 140%;
+  }
+  @if $variant == h2{
+    font-size: 39px;
+    line-height: 140%;
+  }
+  @if $variant == large{
+    font-size: 49px;
+    line-height: 140%;
+  }
+  @if $variant == display{
+    font-size: 61px;
+    line-height: 140%;
+  }
+}
+
+@mixin text-color ($variant: default) {
+  @if $variant == default {
+    color: #1E2339;
+    -webkit-text-fill-color: #1E2339;
+  }
+  @if $variant == accent {
+    color: #606095;
+    -webkit-text-fill-color: #606095;
+  }
+  @if $variant == accent_light {
+    color: #b7b7cd;
+    -webkit-text-fill-color: #b7b7cd;
+  }
+  @if $variant == white {
+    color: #FFF;
+    -webkit-text-fill-color: #FFF;
+  }
+  @if $variant == accent2 {
+    color: #05C489;
+    -webkit-text-fill-color: #05C489;
+  }
+}
+
+@mixin layout-padding () {
+  padding: 50px 65px;
+
+  @media (max-width: $breakpoint_xl) {
+    padding-inline: 56px;
+  }
+
+  @media (max-width: $breakpoint_l) {
+    padding-inline: 48px;
+  }
+
+  @media (max-width: $breakpoint_m) {
+    padding-inline: 24px;
+  }
+
+  @media (max-width: $breakpoint_s) {
+    padding-inline: 16px;
+  }
+
+  @media (max-width: $breakpoint_xs) {
+    padding-inline: 8px;
+  }
+}

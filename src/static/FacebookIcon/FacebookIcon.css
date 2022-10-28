@@ -1,0 +1,14 @@
+.root {
+  width: 24px;
+  height: 24px;
+
+  background: center url("./fb.svg") no-repeat;
+}
+
+.root:hover {
+  background: center url("./fb_hover.svg") no-repeat;
+}
+
+.root:active {
+  background: center url("./fb_active.svg") no-repeat;
+}
